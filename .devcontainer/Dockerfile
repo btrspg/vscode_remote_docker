@@ -5,6 +5,6 @@ RUN apt update && \
     libcunit1 libcunit1-dev libhdf5-dev libopenblas-base \
     libopenblas-dev python3-pip git
 
-WORKDIR /opt
-RUN pip install nbdev jupyter && \
-    pip install -r requirements.txt
+WORKDIR /opt/work
+RUN pip install nbdev jupyter 
+    # pip install -r requirements.txt

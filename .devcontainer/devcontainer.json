@@ -1,12 +1,15 @@
 // For format details, see https://aka.ms/devcontainer.json. For config options, see the README at:
 // https://github.com/microsoft/vscode-dev-containers/tree/v0.191.0/containers/python-3
 {
-	"name": "Python 3",
-	"image": "fin_dev:latest",
+	"name": "vscode_remote_docker",
+	"build": {
+		"dockerfile": "Dockerfile",
+		"context":"..",
+	},
 	// "dockerComposeFile": "../docker-compose.yml",
 	// "service": "dev",
-	"workspaceFolder": "/opt/work",
-  	"workspaceMount": "source=/expt/codes/vscode_remote_docker,target=/opt/work,type=bind,consistency=cached",
+	// "workspaceFolder": "/opt/work",
+  	// "workspaceMount": "source=remote-workspace,target=/opt/work,type=volume",
     "forwardPorts": [4000, 8080],
     "appPort": [4000, 8080],
 
@@ -39,7 +42,7 @@
 	// "forwardPorts": [],
 
 	// Use 'postCreateCommand' to run commands after the container is created.
-	// "postCreateCommand": "pip3 install --user -r requirements.txt",
+	"postCreateCommand": "pip3 install -r requirements.txt",
 
 	// Comment out connect as root instead. More info: https://aka.ms/vscode-remote/containers/non-root.
 	
