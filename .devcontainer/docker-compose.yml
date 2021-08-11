@@ -10,6 +10,9 @@ services:
     image: vsremotedocker:latest
     volumes:
       - /expt/data:/expt/data
-      - /expt/codes/vscode_remote_docker:/opt/work
+      - vscode_remote_test:/opt/work
     ports:
       - "10898:9898"
+
+volumes:
+  vscode_remote_test:

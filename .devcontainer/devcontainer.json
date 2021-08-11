@@ -2,13 +2,13 @@
 // https://github.com/microsoft/vscode-dev-containers/tree/v0.191.0/containers/python-3
 {
 	"name": "vscode_remote_docker",
-	"build": {
-		"dockerfile": "Dockerfile",
-		"context":"..",
-	},
-	// "dockerComposeFile": "../docker-compose.yml",
-	// "service": "dev",
-	// "workspaceFolder": "/opt/work",
+	// "build": {
+	// 	"dockerfile": "Dockerfile",
+	// 	"context":"..",
+	// },
+	"dockerComposeFile": "docker-compose.yml",
+	"service": "dev",
+	"workspaceFolder": "/opt/work",
   	// "workspaceMount": "source=remote-workspace,target=/opt/work,type=volume",
     "forwardPorts": [4000, 8080],
     "appPort": [4000, 8080],
