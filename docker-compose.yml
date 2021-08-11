@@ -1,0 +1,19 @@
+version: "3"
+services:
+  dev:
+    build: 
+      context: ./
+      dockerfile: .devcontainer/Dockerfile
+      
+    restart: unless-stopped
+    working_dir: /opt/work
+    image: vsremotedocker:latest
+    tty: true
+    volumes:
+      - /expt/data:/expt/data
+      - remote-workspace:/opt/work
+    ports:
+      - "10898:9898"
+
+volumes:
+  remote-workspace:

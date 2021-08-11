@@ -1,0 +1,4 @@
+{
+    "jupyter.jupyterServerType": "local",
+    "docker.host":"ssh://logan@192.168.51.112",
+}
