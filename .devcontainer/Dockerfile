@@ -6,5 +6,4 @@ RUN apt update && \
     libopenblas-dev python3-pip git
 
 WORKDIR /opt/work
-RUN pip install nbdev jupyter 
-    # pip install -r requirements.txt
+RUN pip install nbdev jupyter docker-compose 
